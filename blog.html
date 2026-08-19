@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Блог — ЛЕДЕРО</title>
 <meta name="description" content="Материалы, тиражи, сроки и типичные ошибки при запуске партии — статьи о контрактном пошиве кожи для владельцев брендов и байеров.">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,106 +15,150 @@
 
 <header class="site-header">
 <a href="index.html" class="site-header__brand">ЛЕДЕРО</a>
-<button type="button" class="nav-toggle" data-nav-toggle aria-label="Меню"><span></span><span></span><span></span></button>
-<nav class="site-header__nav" data-nav>
+<button type="button" class="nav-toggle" data-nav-toggle aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+<nav class="site-header__nav" id="site-nav" data-nav aria-label="Основная навигация">
 <a href="service.html">Услуги</a><a href="production.html">Производство</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html" class="is-active">Блог</a><a href="contacts.html">Контакты</a>
 </nav>
 <div class="site-header__aside">
-<span class="site-header__phone">+7 495 000-00-00</span>
+<a href="tel:+74950000000" class="site-header__phone">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a>
 <button type="button" class="btn btn-sm" data-open-modal data-src="Шапка сайта">Оставить заявку</button>
 </div>
 </header>
 
 <nav class="breadcrumb" aria-label="Хлебные крошки">
-<a href="index.html">Главная</a><span>/</span><span class="current">Блог</span>
+<ol class="breadcrumb__list">
+<li><a href="index.html">Главная</a></li>
+<li aria-current="page">Блог</li>
+</ol>
 </nav>
 
-<section class="blog-hero">
+<main>
+
+<section class="blog-hero" aria-labelledby="blog-h1">
 <div>
-<div class="eyebrow" style="margin-bottom:26px">Статьи о производстве</div>
-<h1 class="h1">Как устроен контрактный пошив кожи</h1>
+<p class="eyebrow">Статьи о производстве</p>
+<h1 class="h1" id="blog-h1">Как устроен контрактный пошив кожи</h1>
 <p class="lede">Разбираем материалы, тиражи, сроки и типичные ошибки при запуске партии. Пишем для владельцев брендов и байеров.</p>
 </div>
-<div class="tag-pills">
-<span class="tag-pill is-active">Все</span><span class="tag-pill">Производство</span><span class="tag-pill">Материалы</span><span class="tag-pill">Тиражи</span><span class="tag-pill">Бренды</span>
-</div>
+<ul class="tag-pills" aria-label="Темы статей">
+<li><span class="tag-pill is-active">Все</span></li>
+<li><span class="tag-pill">Производство</span></li>
+<li><span class="tag-pill">Материалы</span></li>
+<li><span class="tag-pill">Тиражи</span></li>
+<li><span class="tag-pill">Бренды</span></li>
+</ul>
 </section>
 
-<section class="blog-featured">
-<div class="placeholder" style="--ph-h:360px"><span class="placeholder__label">фото / главная статья</span></div>
+<article class="blog-featured">
+<figure class="photo-frame blog-featured__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Срез кожи растительного и хромового дубления" loading="eager" fetchpriority="high">
+<figcaption class="photo-frame__caption">Главная статья</figcaption>
+</figure>
 <div>
-<div class="blog-featured__meta">12.08.2026 · МАТЕРИАЛЫ · 7 МИН</div>
+<p class="blog-featured__meta">12.08.2026 · МАТЕРИАЛЫ · 7 МИН</p>
 <h2 class="blog-featured__title"><a href="article.html">Растительное или хромовое дубление: что выбрать для партии</a></h2>
 <p class="lede">Тип дубления определяет жёсткость, поведение края, цену метра и то, как изделие будет выглядеть через год носки. Собрали практические ориентиры для выбора под конкретную модель.</p>
 <a href="article.html" class="link-underline">Читать статью</a>
 </div>
-</section>
+</article>
 
-<section class="blog-list-wrap">
-<div class="blog-list">
-<div class="blog-list__grid">
-<div class="blog-list__item"><div class="blog-list__meta">12.08.2026 · МАТЕРИАЛЫ</div><div class="blog-list__title"><a href="article.html">Растительное или хромовое дубление: что выбрать для партии</a></div><div class="blog-list__desc">Разбираем, как тип дубления влияет на жёсткость, цену и срок службы изделия.</div><a href="article.html" class="link-underline link-underline--sm">Читать</a></div>
-<div class="blog-list__item"><div class="blog-list__meta">29.07.2026 · ТИРАЖИ</div><div class="blog-list__title"><a href="article.html">Почему минимальный тираж — 50 единиц</a></div><div class="blog-list__desc">Что происходит на производстве при переходе от единичного образца к партии.</div><a href="article.html" class="link-underline link-underline--sm">Читать</a></div>
-<div class="blog-list__item"><div class="blog-list__meta">15.07.2026 · ПРОИЗВОДСТВО</div><div class="blog-list__title"><a href="article.html">Как мы делаем образец за 10 дней</a></div><div class="blog-list__desc">Пошагово: от эскиза и лекал до опытного экземпляра с вашей фурнитурой.</div><a href="article.html" class="link-underline link-underline--sm">Читать</a></div>
-<div class="blog-list__item"><div class="blog-list__meta">02.07.2026 · МАТЕРИАЛЫ</div><div class="blog-list__title"><a href="article.html">Обрез края: покраска или загибка</a></div><div class="blog-list__desc">Два подхода к отделке края и как они читаются в готовом изделии.</div><a href="article.html" class="link-underline link-underline--sm">Читать</a></div>
-<div class="blog-list__item"><div class="blog-list__meta">18.06.2026 · БРЕНДЫ</div><div class="blog-list__title"><a href="article.html">Что подготовить перед первым заказом на пошив</a></div><div class="blog-list__desc">Список файлов и решений, которые ускорят расчёт и запуск партии.</div><a href="article.html" class="link-underline link-underline--sm">Читать</a></div>
-<div class="blog-list__item"><div class="blog-list__meta">04.06.2026 · ПРОИЗВОДСТВО</div><div class="blog-list__title"><a href="article.html">Контроль качества внутри партии</a></div><div class="blog-list__desc">Как устроена проверка на раскрое, пошиве и приёмке готовой продукции.</div><a href="article.html" class="link-underline link-underline--sm">Читать</a></div>
-</div>
-<div class="pagination">
-<span class="pagination__note">Страница 1 из 4</span>
-<div class="pagination__pages">
-<span class="page-num is-active">1</span><span class="page-num">2</span><span class="page-num">3</span><span class="page-num">4</span><span class="page-num">→</span>
-</div>
-</div>
-</div>
+<div class="blog-list-wrap">
+<section class="blog-list" aria-label="Статьи блога">
+<ul class="blog-list__grid">
+<li class="blog-list__item"><p class="blog-list__meta">12.08.2026 · МАТЕРИАЛЫ</p><p class="blog-list__title"><a href="article.html">Растительное или хромовое дубление: что выбрать для партии</a></p><p class="blog-list__desc">Разбираем, как тип дубления влияет на жёсткость, цену и срок службы изделия.</p><a href="article.html" class="link-underline link-underline--sm">Читать</a></li>
+<li class="blog-list__item"><p class="blog-list__meta">29.07.2026 · ТИРАЖИ</p><p class="blog-list__title"><a href="article.html">Почему минимальный тираж — 50 единиц</a></p><p class="blog-list__desc">Что происходит на производстве при переходе от единичного образца к партии.</p><a href="article.html" class="link-underline link-underline--sm">Читать</a></li>
+<li class="blog-list__item"><p class="blog-list__meta">15.07.2026 · ПРОИЗВОДСТВО</p><p class="blog-list__title"><a href="article.html">Как мы делаем образец за 10 дней</a></p><p class="blog-list__desc">Пошагово: от эскиза и лекал до опытного экземпляра с вашей фурнитурой.</p><a href="article.html" class="link-underline link-underline--sm">Читать</a></li>
+<li class="blog-list__item"><p class="blog-list__meta">02.07.2026 · МАТЕРИАЛЫ</p><p class="blog-list__title"><a href="article.html">Обрез края: покраска или загибка</a></p><p class="blog-list__desc">Два подхода к отделке края и как они читаются в готовом изделии.</p><a href="article.html" class="link-underline link-underline--sm">Читать</a></li>
+<li class="blog-list__item"><p class="blog-list__meta">18.06.2026 · БРЕНДЫ</p><p class="blog-list__title"><a href="article.html">Что подготовить перед первым заказом на пошив</a></p><p class="blog-list__desc">Список файлов и решений, которые ускорят расчёт и запуск партии.</p><a href="article.html" class="link-underline link-underline--sm">Читать</a></li>
+<li class="blog-list__item"><p class="blog-list__meta">04.06.2026 · ПРОИЗВОДСТВО</p><p class="blog-list__title"><a href="article.html">Контроль качества внутри партии</a></p><p class="blog-list__desc">Как устроена проверка на раскрое, пошиве и приёмке готовой продукции.</p><a href="article.html" class="link-underline link-underline--sm">Читать</a></li>
+</ul>
+<nav class="pagination" aria-label="Страницы блога">
+<p class="pagination__note">Страница 1 из 4</p>
+<ul class="pagination__pages">
+<li><span class="page-num is-active" aria-current="page">1</span></li>
+<li><span class="page-num">2</span></li>
+<li><span class="page-num">3</span></li>
+<li><span class="page-num">4</span></li>
+<li><span class="page-num">→</span></li>
+</ul>
+</nav>
 </section>
+</div>
 
 <div class="blog-cta-wrap">
-<section class="cta-band">
+<section class="cta-band" aria-labelledby="blog-cta-h2">
 <div>
-<h2 class="cta-band__title">Не нашли ответ в статьях?</h2>
+<h2 class="cta-band__title" id="blog-cta-h2">Не нашли ответ в статьях?</h2>
 <p class="cta-band__text">Опишите задачу в заявке — технолог ответит по вашей модели и тиражу.</p>
 </div>
 <button type="button" class="btn btn-cta" data-open-modal data-src="Блог · финальный CTA">Оставить заявку</button>
 </section>
+</div>
+
+</main>
 
 <footer>
 <div class="site-footer">
-<div><div class="site-footer__brand-name">ЛЕДЕРО</div><div class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</div></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Услуги</div><a href="service.html">Сумки</a><a href="service.html">Кошельки</a><a href="service.html">Ремни</a><a href="service.html">Ремешки для часов</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Компания</div><a href="production.html">О производстве</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Контакты</div><a href="contacts.html">+7 495 000-00-00</a><a href="contacts.html">zakaz@ledero.ru</a><span>Москва, ул. Примерная, 1</span></div>
+<div>
+<p class="site-footer__brand-name">ЛЕДЕРО</p>
+<p class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</p>
+</div>
+<nav class="site-footer__col" aria-label="Услуги">
+<p class="site-footer__col-title">Услуги</p>
+<ul class="site-footer__list">
+<li><a href="service.html">Сумки</a></li>
+<li><a href="service.html">Кошельки</a></li>
+<li><a href="service.html">Ремни</a></li>
+<li><a href="service.html">Ремешки для часов</a></li>
+</ul>
+</nav>
+<nav class="site-footer__col" aria-label="Компания">
+<p class="site-footer__col-title">Компания</p>
+<ul class="site-footer__list">
+<li><a href="production.html">О производстве</a></li>
+<li><a href="cases.html">Кейсы</a></li>
+<li><a href="terms.html">Условия</a></li>
+<li><a href="blog.html">Блог</a></li>
+</ul>
+</nav>
+<div class="site-footer__col">
+<p class="site-footer__col-title">Контакты</p>
+<ul class="site-footer__list">
+<li><a href="tel:+74950000000">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a></li>
+<li><a href="mailto:zakaz@ledero.ru">zakaz@ledero.ru</a></li>
+<li>Москва, ул. Примерная, 1</li>
+</ul>
+</div>
 </div>
 <div class="sticky-cta">
 <p class="sticky-cta__text">Нужен расчёт партии? Ответим в течение рабочего дня.</p>
 <button type="button" class="btn btn-sticky" data-open-modal data-src="Плавающая панель">Оставить заявку</button>
 </div>
 </footer>
-</div>
 
 <div class="modal-overlay" data-modal-overlay data-close-modal></div>
-<div class="modal" data-modal>
+<div class="modal" data-modal role="dialog" aria-modal="true" aria-labelledby="modal-title">
 <div class="modal__box">
 <div class="modal__head">
-<h3 class="modal__title">Оставить заявку</h3>
+<h2 class="modal__title" id="modal-title">Оставить заявку</h2>
 <button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
 </div>
 <p class="modal__desc">Подберём материалы и рассчитаем стоимость партии.</p>
 <form data-modal-form>
 <input type="hidden" data-modal-source name="source">
 <div class="modal__grid">
-<input placeholder="Имя" name="name">
-<input placeholder="Компания или бренд" name="company">
-<input placeholder="Телефон или email" name="contact">
-<input placeholder="Тираж, шт." name="qty">
+<label><span class="visually-hidden">Имя</span><input type="text" placeholder="Имя" name="name" autocomplete="name"></label>
+<label><span class="visually-hidden">Компания или бренд</span><input type="text" placeholder="Компания или бренд" name="company" autocomplete="organization"></label>
+<label><span class="visually-hidden">Телефон или email</span><input type="text" placeholder="Телефон или email" name="contact" autocomplete="tel"></label>
+<label><span class="visually-hidden">Тираж, шт.</span><input type="text" placeholder="Тираж, шт." name="qty" inputmode="numeric"></label>
 </div>
-<textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea>
+<label><span class="visually-hidden">Что нужно отшить</span><textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea></label>
 <button type="submit" class="btn btn-block">Отправить заявку</button>
 <p class="modal__disclaimer">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
 </form>
 </div>
 </div>
 
-<script src="main.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

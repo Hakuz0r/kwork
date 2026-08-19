@@ -6,6 +6,8 @@
 .article-head .lede { font-size: 19px; max-width: 56ch; }
 
 .article-photo { padding: 0 var(--pad-x); }
+.article-photo__frame { height: 420px; }
+.article-copy__photo { height: 300px; }
 
 .article-body-wrap { padding: 72px var(--pad-x) 0; display: grid; grid-template-columns: minmax(0, 700px) 300px; gap: 64px; }
 

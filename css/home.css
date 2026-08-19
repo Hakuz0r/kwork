@@ -1,23 +1,41 @@
 /* ЛЕДЕРО — стили главной страницы (index.html) */
 
-.home-hero { padding: 118px var(--pad-x) 96px; }
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 64px;
+  align-items: end;
+  padding: 118px var(--pad-x) 96px;
+}
 .home-hero .h1 { max-width: 11ch; }
 .home-hero .lede { max-width: 46ch; margin-bottom: 40px; }
 .home-hero__actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.home-hero__photo { height: 470px; }
 
-.home-production { padding: 110px var(--pad-x); }
+.home-production {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 72px;
+  padding: 110px var(--pad-x);
+}
 .home-production .h2 { max-width: 16ch; }
 .home-production__col p { margin: 0 0 18px; font: 300 16px/1.65 var(--font-sans); color: var(--ink-soft); max-width: 44ch; text-wrap: pretty; }
 .home-production__col p:last-child { margin-bottom: 0; }
+.home-production__photo { height: 300px; }
 
 .home-services { padding: 0 var(--pad-x) 110px; }
-.home-services__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 44px; gap: 24px; flex-wrap: wrap; }
+.home-services__head,
+.home-cases__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 44px; gap: 24px; flex-wrap: wrap; }
+.home-services__head .h2,
+.home-cases__head .h2 { margin-bottom: 0; }
 
 .home-cases { padding: 110px var(--pad-x); }
-.home-cases__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 44px; gap: 24px; flex-wrap: wrap; }
+.home-cases__photo { height: 280px; }
 
 .home-terms { padding: 0 var(--pad-x) 110px; }
+.home-terms .lede { max-width: 52ch; }
 .home-terms__row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
 .home-terms__fact { border-top: 1px solid var(--ink); padding-top: 18px; }
 .home-terms__fact-num { font: 300 28px var(--font-sans); letter-spacing: -.02em; margin-bottom: 6px; }
 .home-terms__fact-label { font: 400 14px/1.5 var(--font-sans); color: var(--muted); }
+.home-terms__more { margin-top: 28px; }

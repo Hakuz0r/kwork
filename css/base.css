@@ -21,7 +21,6 @@
   --pad-x: 72px;
   --radius: 6px;
   --radius-sm: 4px;
-  --ph-stripe: repeating-linear-gradient(135deg, #eeeeec 0 8px, #e6e6e3 8px 16px);
 
   --font-sans: Geist, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -43,6 +42,9 @@ body {
 
 body.modal-open { overflow: hidden; }
 
+p, ul, ol, dl, dd, figure, blockquote { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+
 img { max-width: 100%; display: block; }
 
 a { color: inherit; text-decoration: none; }
@@ -50,7 +52,24 @@ a:hover { color: var(--accent); }
 
 button, input, textarea { font-family: inherit; }
 
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .mono { font-family: var(--font-mono); }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* ---------- шапка ---------- */
 
@@ -108,12 +127,18 @@ button, input, textarea { font-family: inherit; }
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--faint-3);
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
 }
-.breadcrumb a:hover { color: var(--accent); }
-.breadcrumb .current { color: var(--ink-soft); }
+.breadcrumb__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb__list li { display: flex; align-items: center; }
+.breadcrumb__list li:not(:last-child)::after { content: "/"; margin: 0 10px; color: var(--faint-3); }
+.breadcrumb__list a:hover { color: var(--accent); }
+.breadcrumb__list li[aria-current] { color: var(--ink-soft); }
 
 /* ---------- типографика секций ---------- */
 
@@ -183,32 +208,39 @@ button, input, textarea { font-family: inherit; }
 }
 .link-underline--sm { font-size: 13px; padding-bottom: 2px; }
 .link-underline--14 { font-size: 14px; }
+.btn--full { width: 100%; }
 
-/* ---------- фото-заглушка ---------- */
+/* ---------- фото (заглушка до реальных снимков) ---------- */
 
-.placeholder {
+.photo-frame {
+  position: relative;
   height: var(--ph-h, 320px);
   border-radius: var(--radius);
-  background: var(--ph-stripe);
-  display: flex;
-  align-items: flex-end;
-  padding: 18px;
+  overflow: hidden;
+  background: var(--bg-alt);
+  margin: 0;
 }
-.placeholder__label {
+.photo-frame__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-frame__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px;
   font: 400 10px var(--font-mono);
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--faint-2);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, .6);
 }
 
-/* ---------- универсальная 2-колоночная сетка (хиро, о производстве, статья+сайдбар...) ---------- */
+/* ---------- универсальная 2-колоночная сетка (хиро, о производстве, статья+сайдбар...); колонки/отступы задаёт конкретный класс страницы ---------- */
 
-.split-2col {
-  display: grid;
-  grid-template-columns: var(--split, 1fr 1fr);
-  gap: var(--split-gap, 64px);
-  align-items: var(--split-align, center);
-}
+.split-2col { display: grid; }
 
 /* ---------- статистика (4 колонки с разделителями) ---------- */
 
@@ -243,16 +275,17 @@ button, input, textarea { font-family: inherit; }
 
 .grid-cards {
   display: grid;
-  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
+.grid-cards--4 { grid-template-columns: repeat(4, 1fr); }
 .card__title { font: 500 16px var(--font-sans); margin-top: 16px; }
 .card__title a:hover { color: var(--accent); }
 .card__meta { font: 400 13px var(--font-sans); color: var(--muted); margin-top: 6px; }
 
 /* ---------- этапы процесса (5 шагов) ---------- */
 
-.process { display: grid; grid-template-columns: repeat(5, 1fr); }
+.process { display: grid; grid-template-columns: repeat(5, 1fr); list-style: none; }
 .process__item { border-top: 1px solid var(--line-soft); padding: 22px 24px 0; }
 .process__item:first-child { border-top-color: var(--ink); padding-left: 0; }
 .process__item:last-child { padding-right: 0; }
@@ -297,10 +330,11 @@ button, input, textarea { font-family: inherit; }
   background: #fff;
   border-top: 1px solid var(--line);
 }
-.site-footer__brand-name { font: 500 15px var(--font-sans); letter-spacing: .24em; margin-bottom: 14px; }
-.site-footer__brand-desc { font: 400 13px/1.6 var(--font-sans); color: var(--faint); }
-.site-footer__col { display: flex; flex-direction: column; gap: 6px; font: 400 13px var(--font-sans); color: var(--muted); }
-.site-footer__col-title { color: var(--ink); font-weight: 500; margin-bottom: 2px; }
+.site-footer__brand-name { margin: 0 0 14px; font: 500 15px var(--font-sans); letter-spacing: .24em; }
+.site-footer__brand-desc { margin: 0; font: 400 13px/1.6 var(--font-sans); color: var(--faint); }
+.site-footer__col { font: 400 13px var(--font-sans); color: var(--muted); }
+.site-footer__col-title { margin: 0 0 8px; color: var(--ink); font-weight: 500; }
+.site-footer__list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; }
 
 /* ---------- плавающая CTA-панель ---------- */
 

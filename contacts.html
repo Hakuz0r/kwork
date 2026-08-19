@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Контакты — ЛЕДЕРО</title>
 <meta name="description" content="Телефон, почта, адрес производства и реквизиты компании. Отвечаем на заявки в течение рабочего дня.">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,69 +15,105 @@
 
 <header class="site-header">
 <a href="index.html" class="site-header__brand">ЛЕДЕРО</a>
-<button type="button" class="nav-toggle" data-nav-toggle aria-label="Меню"><span></span><span></span><span></span></button>
-<nav class="site-header__nav" data-nav>
+<button type="button" class="nav-toggle" data-nav-toggle aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+<nav class="site-header__nav" id="site-nav" data-nav aria-label="Основная навигация">
 <a href="service.html">Услуги</a><a href="production.html">Производство</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a><a href="contacts.html" class="is-active">Контакты</a>
 </nav>
 <div class="site-header__aside">
-<span class="site-header__phone">+7 495 000-00-00</span>
+<a href="tel:+74950000000" class="site-header__phone">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a>
 <button type="button" class="btn btn-sm" data-open-modal data-src="Шапка сайта">Оставить заявку</button>
 </div>
 </header>
 
 <nav class="breadcrumb" aria-label="Хлебные крошки">
-<a href="index.html">Главная</a><span>/</span><span class="current">Контакты</span>
+<ol class="breadcrumb__list">
+<li><a href="index.html">Главная</a></li>
+<li aria-current="page">Контакты</li>
+</ol>
 </nav>
 
-<section class="contacts-hero split-2col" style="--split: 1fr 1fr; --split-gap: 72px; --split-align: start;">
+<main>
+
+<section class="contacts-hero" aria-labelledby="contacts-h1">
 <div class="contacts-info">
-<div class="eyebrow">Связаться с производством</div>
-<h1 class="h1-sub">Контакты</h1>
+<p class="eyebrow">Связаться с производством</p>
+<h1 class="h1-sub" id="contacts-h1">Контакты</h1>
 <p class="lede">Отвечаем на заявки в течение рабочего дня. Для расчёта партии удобнее сразу оставить заявку — так технолог получит вводные и вернётся с цифрами.</p>
 <button type="button" class="btn btn-lg" data-open-modal data-src="Контакты · верх страницы">Оставить заявку</button>
-<div class="contacts-recon">
-<div class="contacts-recon__row"><div class="contacts-recon__label">Телефон</div><div><div class="contacts-recon__value">+7 495 000-00-00</div><div class="contacts-recon__hint">Пн–Пт, 9:00–18:00 (МСК)</div></div></div>
-<div class="contacts-recon__row"><div class="contacts-recon__label">Почта</div><div><div class="contacts-recon__value">zakaz@ledero.ru</div><div class="contacts-recon__hint">Заявки, спецификации, документы</div></div></div>
-<div class="contacts-recon__row"><div class="contacts-recon__label">Адрес</div><div><div class="contacts-recon__value">Москва, ул. Примерная, 1</div><div class="contacts-recon__hint">Производство и офис, вход со двора</div></div></div>
-<div class="contacts-recon__row"><div class="contacts-recon__label">График</div><div><div class="contacts-recon__value">Пн–Пт 9:00–18:00</div><div class="contacts-recon__hint">Визит на производство — по записи</div></div></div>
-</div>
+<dl class="contacts-recon">
+<div class="contacts-recon__row"><dt class="contacts-recon__label">Телефон</dt><dd><p class="contacts-recon__value"><a href="tel:+74950000000">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a></p><p class="contacts-recon__hint">Пн–Пт, 9:00–18:00 (МСК)</p></dd></div>
+<div class="contacts-recon__row"><dt class="contacts-recon__label">Почта</dt><dd><p class="contacts-recon__value"><a href="mailto:zakaz@ledero.ru">zakaz@ledero.ru</a></p><p class="contacts-recon__hint">Заявки, спецификации, документы</p></dd></div>
+<div class="contacts-recon__row"><dt class="contacts-recon__label">Адрес</dt><dd><p class="contacts-recon__value">Москва, ул. Примерная, 1</p><p class="contacts-recon__hint">Производство и офис, вход со двора</p></dd></div>
+<div class="contacts-recon__row"><dt class="contacts-recon__label">График</dt><dd><p class="contacts-recon__value">Пн–Пт 9:00–18:00</p><p class="contacts-recon__hint">Визит на производство — по записи</p></dd></div>
+</dl>
 </div>
 <div>
-<div class="placeholder" style="--ph-h:520px"><span class="placeholder__label">карта / схема проезда</span></div>
+<figure class="photo-frame contacts-map__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Схема проезда до производства ЛЕДЕРО" loading="eager" fetchpriority="high">
+<figcaption class="photo-frame__caption">Схема проезда</figcaption>
+</figure>
 <div class="contacts-map-side">
-<div><div class="contacts-map-side__title">Отдел заказов</div><div class="contacts-map-side__text">Расчёт партии, сроки, спецификации, договор</div></div>
-<div><div class="contacts-map-side__title">Технолог</div><div class="contacts-map-side__text">Лекала, конструкция, подбор кожи и фурнитуры</div></div>
+<div><p class="contacts-map-side__title">Отдел заказов</p><p class="contacts-map-side__text">Расчёт партии, сроки, спецификации, договор</p></div>
+<div><p class="contacts-map-side__title">Технолог</p><p class="contacts-map-side__text">Лекала, конструкция, подбор кожи и фурнитуры</p></div>
 </div>
 </div>
 </section>
 
-<section class="contacts-requisites">
-<h2 class="h2">Реквизиты</h2>
-<div class="contacts-requisites__grid">
-<div class="contacts-requisites__row"><div class="contacts-requisites__label">Наименование</div><div class="contacts-requisites__value">ООО «Ледеро»</div></div>
-<div class="contacts-requisites__row"><div class="contacts-requisites__label">ИНН / КПП</div><div class="contacts-requisites__value">0000000000 / 000000000</div></div>
-<div class="contacts-requisites__row"><div class="contacts-requisites__label">ОГРН</div><div class="contacts-requisites__value">0000000000000</div></div>
-<div class="contacts-requisites__row"><div class="contacts-requisites__label">Юридический адрес</div><div class="contacts-requisites__value">000000, Москва, ул. Примерная, 1</div></div>
-<div class="contacts-requisites__row"><div class="contacts-requisites__label">Банк</div><div class="contacts-requisites__value">АО «Банк»</div></div>
-<div class="contacts-requisites__row"><div class="contacts-requisites__label">Расчётный счёт</div><div class="contacts-requisites__value">00000000000000000000</div></div>
-</div>
+<section class="contacts-requisites" aria-labelledby="contacts-requisites-h2">
+<h2 class="h2" id="contacts-requisites-h2">Реквизиты</h2>
+<dl class="contacts-requisites__grid">
+<div class="contacts-requisites__row"><dt class="contacts-requisites__label">Наименование</dt><dd class="contacts-requisites__value">ООО «Ледеро»</dd></div>
+<div class="contacts-requisites__row"><dt class="contacts-requisites__label">ИНН / КПП</dt><dd class="contacts-requisites__value">0000000000 / 000000000</dd></div>
+<div class="contacts-requisites__row"><dt class="contacts-requisites__label">ОГРН</dt><dd class="contacts-requisites__value">0000000000000</dd></div>
+<div class="contacts-requisites__row"><dt class="contacts-requisites__label">Юридический адрес</dt><dd class="contacts-requisites__value">000000, Москва, ул. Примерная, 1</dd></div>
+<div class="contacts-requisites__row"><dt class="contacts-requisites__label">Банк</dt><dd class="contacts-requisites__value">АО «Банк»</dd></div>
+<div class="contacts-requisites__row"><dt class="contacts-requisites__label">Расчётный счёт</dt><dd class="contacts-requisites__value">00000000000000000000</dd></div>
+</dl>
 <p class="contacts-requisites__note">Реквизиты — заглушка, заменить на фактические перед публикацией.</p>
 </section>
 
-<section class="cta-band">
+<section class="cta-band" aria-labelledby="contacts-cta-h2">
 <div>
-<h2 class="cta-band__title">Оставьте заявку — ответим сегодня</h2>
+<h2 class="cta-band__title" id="contacts-cta-h2">Оставьте заявку — ответим сегодня</h2>
 <p class="cta-band__text">Опишите изделие, тираж и сроки. Расчёт и варианты материалов пришлём в ответ.</p>
 </div>
 <button type="button" class="btn btn-cta" data-open-modal data-src="Контакты · финальный CTA">Оставить заявку</button>
 </section>
 
+</main>
+
 <footer>
 <div class="site-footer">
-<div><div class="site-footer__brand-name">ЛЕДЕРО</div><div class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</div></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Услуги</div><a href="service.html">Сумки</a><a href="service.html">Кошельки</a><a href="service.html">Ремни</a><a href="service.html">Ремешки для часов</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Компания</div><a href="production.html">О производстве</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Контакты</div><a href="contacts.html">+7 495 000-00-00</a><a href="contacts.html">zakaz@ledero.ru</a><span>Москва, ул. Примерная, 1</span></div>
+<div>
+<p class="site-footer__brand-name">ЛЕДЕРО</p>
+<p class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</p>
+</div>
+<nav class="site-footer__col" aria-label="Услуги">
+<p class="site-footer__col-title">Услуги</p>
+<ul class="site-footer__list">
+<li><a href="service.html">Сумки</a></li>
+<li><a href="service.html">Кошельки</a></li>
+<li><a href="service.html">Ремни</a></li>
+<li><a href="service.html">Ремешки для часов</a></li>
+</ul>
+</nav>
+<nav class="site-footer__col" aria-label="Компания">
+<p class="site-footer__col-title">Компания</p>
+<ul class="site-footer__list">
+<li><a href="production.html">О производстве</a></li>
+<li><a href="cases.html">Кейсы</a></li>
+<li><a href="terms.html">Условия</a></li>
+<li><a href="blog.html">Блог</a></li>
+</ul>
+</nav>
+<div class="site-footer__col">
+<p class="site-footer__col-title">Контакты</p>
+<ul class="site-footer__list">
+<li><a href="tel:+74950000000">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a></li>
+<li><a href="mailto:zakaz@ledero.ru">zakaz@ledero.ru</a></li>
+<li>Москва, ул. Примерная, 1</li>
+</ul>
+</div>
 </div>
 <div class="sticky-cta">
 <p class="sticky-cta__text">Нужен расчёт партии? Ответим в течение рабочего дня.</p>
@@ -85,28 +122,28 @@
 </footer>
 
 <div class="modal-overlay" data-modal-overlay data-close-modal></div>
-<div class="modal" data-modal>
+<div class="modal" data-modal role="dialog" aria-modal="true" aria-labelledby="modal-title">
 <div class="modal__box">
 <div class="modal__head">
-<h3 class="modal__title">Оставить заявку</h3>
+<h2 class="modal__title" id="modal-title">Оставить заявку</h2>
 <button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
 </div>
 <p class="modal__desc">Подберём материалы и рассчитаем стоимость партии.</p>
 <form data-modal-form>
 <input type="hidden" data-modal-source name="source">
 <div class="modal__grid">
-<input placeholder="Имя" name="name">
-<input placeholder="Компания или бренд" name="company">
-<input placeholder="Телефон или email" name="contact">
-<input placeholder="Тираж, шт." name="qty">
+<label><span class="visually-hidden">Имя</span><input type="text" placeholder="Имя" name="name" autocomplete="name"></label>
+<label><span class="visually-hidden">Компания или бренд</span><input type="text" placeholder="Компания или бренд" name="company" autocomplete="organization"></label>
+<label><span class="visually-hidden">Телефон или email</span><input type="text" placeholder="Телефон или email" name="contact" autocomplete="tel"></label>
+<label><span class="visually-hidden">Тираж, шт.</span><input type="text" placeholder="Тираж, шт." name="qty" inputmode="numeric"></label>
 </div>
-<textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea>
+<label><span class="visually-hidden">Что нужно отшить</span><textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea></label>
 <button type="submit" class="btn btn-block">Отправить заявку</button>
 <p class="modal__disclaimer">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
 </form>
 </div>
 </div>
 
-<script src="main.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

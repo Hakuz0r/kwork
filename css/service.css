@@ -1,15 +1,29 @@
 /* ЛЕДЕРО — стили страницы направления «Сумки» (service.html) */
 
-.svc-hero { padding: 88px var(--pad-x) 84px; }
+.svc-hero {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 64px;
+  align-items: end;
+  padding: 88px var(--pad-x) 84px;
+}
 .svc-hero .h1-sub { max-width: 14ch; }
 .svc-hero .lede { max-width: 46ch; margin-bottom: 38px; }
 .svc-hero__actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.svc-hero__photo { height: 430px; }
 
 .svc-directions { padding: 96px var(--pad-x) 0; }
 .svc-directions .card__title { font-size: 18px; }
 .svc-directions .card__meta { font-size: 14px; margin-top: 6px; }
+.svc-directions__photo { height: 220px; }
 
-.svc-materials { padding: 96px var(--pad-x); }
+.svc-materials {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 72px;
+  align-items: start;
+  padding: 96px var(--pad-x);
+}
 .svc-materials__col p { margin: 0 0 18px; font: 300 16px/1.65 var(--font-sans); color: var(--ink-soft); max-width: 42ch; text-wrap: pretty; }
 .svc-materials__col p:last-child { margin-bottom: 0; }
 .svc-materials .kv-row { --kv-w: 200px; --kv-gap: 32px; padding: 22px 0; }
@@ -21,6 +35,8 @@
 
 .svc-cases { padding: 96px var(--pad-x); }
 .svc-cases__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 40px; gap: 24px; flex-wrap: wrap; }
+.svc-cases__head .h2 { margin-bottom: 0; }
+.svc-cases__photo { height: 270px; }
 
 .svc-faq { padding: 0 var(--pad-x) 96px; }
 .faq { border-top: 1px solid var(--ink); }

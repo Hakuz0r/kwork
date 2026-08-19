@@ -1,9 +1,17 @@
 /* ЛЕДЕРО — стили страницы контактов (contacts.html) */
 
-.contacts-hero { padding: 80px var(--pad-x) 72px; }
+.contacts-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  padding: 80px var(--pad-x) 72px;
+}
 
 .contacts-info .h1-sub { max-width: 14ch; }
 .contacts-info .lede { max-width: 44ch; margin-bottom: 44px; font-size: 18px; }
+
+.contacts-map__photo { height: 520px; }
 
 .contacts-recon { border-top: 1px solid var(--ink); margin-top: 48px; }
 .contacts-recon__row { display: grid; grid-template-columns: 130px 1fr; gap: 32px; padding: 24px 0; border-bottom: 1px solid var(--line); }

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Производство — ЛЕДЕРО</title>
 <meta name="description" content="Раскрой, пошив, отделка и упаковка — в одном цехе в Москве, без подрядчиков. Как устроено производство и как проходит заказ от заявки до отгрузки.">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,79 +15,115 @@
 
 <header class="site-header">
 <a href="index.html" class="site-header__brand">ЛЕДЕРО</a>
-<button type="button" class="nav-toggle" data-nav-toggle aria-label="Меню"><span></span><span></span><span></span></button>
-<nav class="site-header__nav" data-nav>
+<button type="button" class="nav-toggle" data-nav-toggle aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+<nav class="site-header__nav" id="site-nav" data-nav aria-label="Основная навигация">
 <a href="service.html">Услуги</a><a href="production.html" class="is-active">Производство</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a><a href="contacts.html">Контакты</a>
 </nav>
 <div class="site-header__aside">
-<span class="site-header__phone">+7 495 000-00-00</span>
+<a href="tel:+74950000000" class="site-header__phone">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a>
 <button type="button" class="btn btn-sm" data-open-modal data-src="Шапка сайта">Оставить заявку</button>
 </div>
 </header>
 
 <nav class="breadcrumb" aria-label="Хлебные крошки">
-<a href="index.html">Главная</a><span>/</span><span class="current">Производство</span>
+<ol class="breadcrumb__list">
+<li><a href="index.html">Главная</a></li>
+<li aria-current="page">Производство</li>
+</ol>
 </nav>
 
-<section class="prod-hero split-2col" style="--split: 1.05fr .95fr; --split-align: end;">
+<main>
+
+<section class="prod-hero" aria-labelledby="prod-h1">
 <div>
-<div class="eyebrow">Цех в Москве · полный цикл</div>
-<h1 class="h1-sub">Один цех — от раскроя до упаковки</h1>
+<p class="eyebrow">Цех в Москве · полный цикл</p>
+<h1 class="h1-sub" id="prod-h1">Один цех — от раскроя до упаковки</h1>
 <p class="lede">Не отдаём этапы на сторону: раскрой, пошив, отделку и упаковку делают одни и те же мастера в одном здании. За партию отвечает конкретный человек, а не цепочка подрядчиков.</p>
 <div class="prod-hero__actions">
 <button type="button" class="btn btn-lg" data-open-modal data-src="Производство · хиро">Оставить заявку</button>
 <a href="cases.html" class="link-underline">Смотреть кейсы</a>
 </div>
 </div>
-<div class="placeholder" style="--ph-h:430px"><span class="placeholder__label">фото / общий вид цеха</span></div>
+<figure class="photo-frame prod-hero__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Общий вид производственного цеха ЛЕДЕРО" loading="eager" fetchpriority="high">
+<figcaption class="photo-frame__caption">Общий вид цеха</figcaption>
+</figure>
 </section>
 
 <div class="stats">
-<div class="stats__item"><div class="stats__num">12 лет</div><div class="stats__label">на контрактном пошиве</div></div>
-<div class="stats__item"><div class="stats__num">40+</div><div class="stats__label">брендов в работе</div></div>
-<div class="stats__item"><div class="stats__num">от 50 шт.</div><div class="stats__label">минимальный тираж</div></div>
-<div class="stats__item"><div class="stats__num">10 дней</div><div class="stats__label">срок образца</div></div>
+<div class="stats__item"><p class="stats__num">12 лет</p><p class="stats__label">на контрактном пошиве</p></div>
+<div class="stats__item"><p class="stats__num">40+</p><p class="stats__label">брендов в работе</p></div>
+<div class="stats__item"><p class="stats__num">от 50 шт.</p><p class="stats__label">минимальный тираж</p></div>
+<div class="stats__item"><p class="stats__num">10 дней</p><p class="stats__label">срок образца</p></div>
 </div>
 
-<section class="prod-shop">
-<h2 class="h2">Что происходит в цехе</h2>
+<section class="prod-shop" aria-labelledby="prod-shop-h2">
+<h2 class="h2" id="prod-shop-h2">Что происходит в цехе</h2>
 <div class="prod-shop__col">
 <p>Работаем по вашим лекалам или разрабатываем конструкцию с нуля вместе с технологом. На каждом этапе — раскрой, пошив, отделка, упаковка — свой участок и свой ответственный, поэтому дефект ловится там, где он появился, а не на приёмке готовой партии.</p>
 </div>
-<div class="prod-craft">
-<div class="prod-craft__item"><div class="prod-craft__title">Раскрой</div><div class="prod-craft__desc">Ручной и по шаблону, контроль расхода кожи</div></div>
-<div class="prod-craft__item"><div class="prod-craft__title">Пошив</div><div class="prod-craft__desc">14 мастеров, промышленное оборудование</div></div>
-<div class="prod-craft__item"><div class="prod-craft__title">Отделка</div><div class="prod-craft__desc">Обрез, тиснение логотипа, фурнитура</div></div>
-<div class="prod-craft__item"><div class="prod-craft__title">Упаковка</div><div class="prod-craft__desc">Индивидуальная, с вашей маркировкой</div></div>
-</div>
+<ul class="prod-craft">
+<li class="prod-craft__item"><p class="prod-craft__title">Раскрой</p><p class="prod-craft__desc">Ручной и по шаблону, контроль расхода кожи</p></li>
+<li class="prod-craft__item"><p class="prod-craft__title">Пошив</p><p class="prod-craft__desc">14 мастеров, промышленное оборудование</p></li>
+<li class="prod-craft__item"><p class="prod-craft__title">Отделка</p><p class="prod-craft__desc">Обрез, тиснение логотипа, фурнитура</p></li>
+<li class="prod-craft__item"><p class="prod-craft__title">Упаковка</p><p class="prod-craft__desc">Индивидуальная, с вашей маркировкой</p></li>
+</ul>
 </section>
 
-<section class="prod-process">
-<h2 class="h2">Как проходит заказ</h2>
-<div class="process">
-<div class="process__item"><div class="process__num">01</div><div class="process__title">Заявка</div><div class="process__desc">Обсуждаем изделие, тираж, материалы и бюджет</div></div>
-<div class="process__item"><div class="process__num">02</div><div class="process__title">Образец</div><div class="process__desc">Шьём опытный экземпляр по лекалам или с нуля</div></div>
-<div class="process__item"><div class="process__num">03</div><div class="process__title">Согласование</div><div class="process__desc">Правки по конструкции, фурнитуре и цвету</div></div>
-<div class="process__item"><div class="process__num">04</div><div class="process__title">Производство</div><div class="process__desc">Партия в цехе, контроль качества по этапам</div></div>
-<div class="process__item"><div class="process__num">05</div><div class="process__title">Отгрузка</div><div class="process__desc">Упаковка, маркировка, передача перевозчику</div></div>
-</div>
+<section class="prod-process" aria-labelledby="prod-process-h2">
+<h2 class="h2" id="prod-process-h2">Как проходит заказ</h2>
+<ol class="process">
+<li class="process__item"><p class="process__num">01</p><p class="process__title">Заявка</p><p class="process__desc">Обсуждаем изделие, тираж, материалы и бюджет</p></li>
+<li class="process__item"><p class="process__num">02</p><p class="process__title">Образец</p><p class="process__desc">Шьём опытный экземпляр по лекалам или с нуля</p></li>
+<li class="process__item"><p class="process__num">03</p><p class="process__title">Согласование</p><p class="process__desc">Правки по конструкции, фурнитуре и цвету</p></li>
+<li class="process__item"><p class="process__num">04</p><p class="process__title">Производство</p><p class="process__desc">Партия в цехе, контроль качества по этапам</p></li>
+<li class="process__item"><p class="process__num">05</p><p class="process__title">Отгрузка</p><p class="process__desc">Упаковка, маркировка, передача перевозчику</p></li>
+</ol>
 <div class="prod-process__cta"><button type="button" class="btn btn-lg" data-open-modal data-src="Производство · этапы">Оставить заявку</button></div>
 </section>
 
-<section class="cta-band">
+<section class="cta-band" aria-labelledby="prod-cta-h2">
 <div>
-<h2 class="cta-band__title">Рассчитаем стоимость вашей партии</h2>
+<h2 class="cta-band__title" id="prod-cta-h2">Рассчитаем стоимость вашей партии</h2>
 <p class="cta-band__text">Опишите изделие и тираж — вернёмся с расчётом и сроками в течение рабочего дня.</p>
 </div>
 <button type="button" class="btn btn-cta" data-open-modal data-src="Производство · финальный CTA">Оставить заявку</button>
 </section>
 
+</main>
+
 <footer>
 <div class="site-footer">
-<div><div class="site-footer__brand-name">ЛЕДЕРО</div><div class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</div></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Услуги</div><a href="service.html">Сумки</a><a href="service.html">Кошельки</a><a href="service.html">Ремни</a><a href="service.html">Ремешки для часов</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Компания</div><a href="production.html">О производстве</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Контакты</div><a href="contacts.html">+7 495 000-00-00</a><a href="contacts.html">zakaz@ledero.ru</a><span>Москва, ул. Примерная, 1</span></div>
+<div>
+<p class="site-footer__brand-name">ЛЕДЕРО</p>
+<p class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</p>
+</div>
+<nav class="site-footer__col" aria-label="Услуги">
+<p class="site-footer__col-title">Услуги</p>
+<ul class="site-footer__list">
+<li><a href="service.html">Сумки</a></li>
+<li><a href="service.html">Кошельки</a></li>
+<li><a href="service.html">Ремни</a></li>
+<li><a href="service.html">Ремешки для часов</a></li>
+</ul>
+</nav>
+<nav class="site-footer__col" aria-label="Компания">
+<p class="site-footer__col-title">Компания</p>
+<ul class="site-footer__list">
+<li><a href="production.html">О производстве</a></li>
+<li><a href="cases.html">Кейсы</a></li>
+<li><a href="terms.html">Условия</a></li>
+<li><a href="blog.html">Блог</a></li>
+</ul>
+</nav>
+<div class="site-footer__col">
+<p class="site-footer__col-title">Контакты</p>
+<ul class="site-footer__list">
+<li><a href="tel:+74950000000">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a></li>
+<li><a href="mailto:zakaz@ledero.ru">zakaz@ledero.ru</a></li>
+<li>Москва, ул. Примерная, 1</li>
+</ul>
+</div>
 </div>
 <div class="sticky-cta">
 <p class="sticky-cta__text">Нужен расчёт партии? Ответим в течение рабочего дня.</p>
@@ -95,28 +132,28 @@
 </footer>
 
 <div class="modal-overlay" data-modal-overlay data-close-modal></div>
-<div class="modal" data-modal>
+<div class="modal" data-modal role="dialog" aria-modal="true" aria-labelledby="modal-title">
 <div class="modal__box">
 <div class="modal__head">
-<h3 class="modal__title">Оставить заявку</h3>
+<h2 class="modal__title" id="modal-title">Оставить заявку</h2>
 <button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
 </div>
 <p class="modal__desc">Подберём материалы и рассчитаем стоимость партии.</p>
 <form data-modal-form>
 <input type="hidden" data-modal-source name="source">
 <div class="modal__grid">
-<input placeholder="Имя" name="name">
-<input placeholder="Компания или бренд" name="company">
-<input placeholder="Телефон или email" name="contact">
-<input placeholder="Тираж, шт." name="qty">
+<label><span class="visually-hidden">Имя</span><input type="text" placeholder="Имя" name="name" autocomplete="name"></label>
+<label><span class="visually-hidden">Компания или бренд</span><input type="text" placeholder="Компания или бренд" name="company" autocomplete="organization"></label>
+<label><span class="visually-hidden">Телефон или email</span><input type="text" placeholder="Телефон или email" name="contact" autocomplete="tel"></label>
+<label><span class="visually-hidden">Тираж, шт.</span><input type="text" placeholder="Тираж, шт." name="qty" inputmode="numeric"></label>
 </div>
-<textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea>
+<label><span class="visually-hidden">Что нужно отшить</span><textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea></label>
 <button type="submit" class="btn btn-block">Отправить заявку</button>
 <p class="modal__disclaimer">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
 </form>
 </div>
 </div>
 
-<script src="main.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

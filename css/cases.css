@@ -6,3 +6,4 @@
 
 .cases-grid { padding: 72px var(--pad-x) 96px; }
 .cases-grid .card__title { font-size: 17px; }
+.cases-grid__photo { height: 260px; }

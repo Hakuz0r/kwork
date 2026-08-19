@@ -16,6 +16,7 @@
 .tag-pill.is-active { border-color: var(--ink); color: var(--ink); }
 
 .blog-featured { padding: 64px var(--pad-x) 0; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+.blog-featured__photo { height: 360px; }
 .blog-featured__meta { font: 400 11px var(--font-mono); letter-spacing: .12em; color: var(--faint); margin-bottom: 18px; }
 .blog-featured__title { margin: 0 0 18px; font: 400 clamp(1.75rem, 1.2rem + 2vw, 2.375rem)/1.15 var(--font-sans); letter-spacing: -.02em; max-width: 22ch; }
 .blog-featured__title a:hover { color: var(--accent); }

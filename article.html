@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Растительное или хромовое дубление: что выбрать для партии — ЛЕДЕРО</title>
 <meta name="description" content="Тип дубления влияет на жёсткость изделия, поведение края, цену материала и вид партии через год носки. Практические ориентиры для выбора.">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,124 +15,165 @@
 
 <header class="site-header">
 <a href="index.html" class="site-header__brand">ЛЕДЕРО</a>
-<button type="button" class="nav-toggle" data-nav-toggle aria-label="Меню"><span></span><span></span><span></span></button>
-<nav class="site-header__nav" data-nav>
+<button type="button" class="nav-toggle" data-nav-toggle aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+<nav class="site-header__nav" id="site-nav" data-nav aria-label="Основная навигация">
 <a href="service.html">Услуги</a><a href="production.html">Производство</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html" class="is-active">Блог</a><a href="contacts.html">Контакты</a>
 </nav>
 <div class="site-header__aside">
-<span class="site-header__phone">+7 495 000-00-00</span>
+<a href="tel:+74950000000" class="site-header__phone">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a>
 <button type="button" class="btn btn-sm" data-open-modal data-src="Шапка сайта">Оставить заявку</button>
 </div>
 </header>
 
 <nav class="breadcrumb" aria-label="Хлебные крошки">
-<a href="index.html">Главная</a><span>/</span><a href="blog.html">Блог</a><span>/</span><span class="current">Растительное или хромовое дубление</span>
+<ol class="breadcrumb__list">
+<li><a href="index.html">Главная</a></li>
+<li><a href="blog.html">Блог</a></li>
+<li aria-current="page">Растительное или хромовое дубление</li>
+</ol>
 </nav>
 
+<main>
 <article>
 <header class="article-head">
-<div class="article-head__meta">12.08.2026 · МАТЕРИАЛЫ · 7 МИН ЧТЕНИЯ</div>
+<p class="article-head__meta">12.08.2026 · МАТЕРИАЛЫ · 7 МИН ЧТЕНИЯ</p>
 <h1 class="h1">Растительное или хромовое дубление: что выбрать для партии</h1>
 <p class="lede">Тип дубления влияет на жёсткость изделия, поведение края, цену материала и на то, как партия будет выглядеть через год носки. Ниже — ориентиры, которыми мы пользуемся на производстве.</p>
 </header>
 
-<div class="article-photo">
-<div class="placeholder" style="--ph-h:420px"><span class="placeholder__label">фото / срез кожи, два типа дубления</span></div>
-</div>
+<figure class="photo-frame article-photo__frame">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Срез кожи: растительное и хромовое дубление" loading="eager" fetchpriority="high">
+<figcaption class="photo-frame__caption">Срез кожи, два типа дубления</figcaption>
+</figure>
 
 <div class="article-body-wrap">
 <div class="article-copy">
 <p>Растительное дубление даёт плотную, довольно жёсткую кожу, которая со временем темнеет и приобретает патину. Она хорошо держит форму, поэтому её берут для ремней, портфелей и изделий с несущей конструкцией. Край такой кожи можно красить в несколько слоёв и полировать.</p>
 <p>Хромовое дубление — более мягкий и эластичный материал со стабильным цветом. Он предсказуемее в партии: оттенок меньше уходит от артикула к артикулу, а изделие остаётся мягким с первого дня. Это частый выбор для сумок с подкладкой, кошельков и аксессуаров, где важна не жёсткость, а тактильность.</p>
 <h2 id="vybor">Что учитывать при выборе</h2>
-<div class="kv">
-<div class="kv-row"><div class="kv-term">Конструкция</div><div class="kv-desc">Жёсткие формы — растительное дубление. Мягкие — хромовое.</div></div>
-<div class="kv-row"><div class="kv-term">Партия</div><div class="kv-desc">Чем больше тираж, тем важнее стабильность оттенка.</div></div>
-<div class="kv-row"><div class="kv-term">Цена</div><div class="kv-desc">Растительное дубление дороже и требует больше времени на отделку края.</div></div>
-<div class="kv-row"><div class="kv-term">Носка</div><div class="kv-desc">Патина как часть эстетики бренда или стабильный вид годами.</div></div>
-</div>
-<blockquote class="article-quote">На партии от 300 единиц стабильность артикула важнее его характера: разброс оттенка заметен покупателю сильнее, чем разница в жёсткости.</blockquote>
+<dl class="kv">
+<div class="kv-row"><dt class="kv-term">Конструкция</dt><dd class="kv-desc">Жёсткие формы — растительное дубление. Мягкие — хромовое.</dd></div>
+<div class="kv-row"><dt class="kv-term">Партия</dt><dd class="kv-desc">Чем больше тираж, тем важнее стабильность оттенка.</dd></div>
+<div class="kv-row"><dt class="kv-term">Цена</dt><dd class="kv-desc">Растительное дубление дороже и требует больше времени на отделку края.</dd></div>
+<div class="kv-row"><dt class="kv-term">Носка</dt><dd class="kv-desc">Патина как часть эстетики бренда или стабильный вид годами.</dd></div>
+</dl>
+<blockquote class="article-quote">
+<p>На партии от 300 единиц стабильность артикула важнее его характера: разброс оттенка заметен покупателю сильнее, чем разница в жёсткости.</p>
+</blockquote>
 <p id="kombo">На практике мы часто комбинируем: корпус изделия из хромового дубления, а несущие элементы — ремень, ручки, шлевки — из растительного. Такая схема сохраняет мягкость и снимает вопрос с растяжением нагруженных деталей.</p>
-<div class="placeholder" style="--ph-h:300px"><span class="placeholder__label">фото / комбинированное изделие</span></div>
+<figure class="photo-frame article-copy__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Изделие из комбинированной кожи: корпус и несущие детали разного дубления" loading="lazy">
+<figcaption class="photo-frame__caption">Комбинированное изделие</figcaption>
+</figure>
 <p class="article-figure-caption">Комбинированная конструкция: корпус и несущие детали из разной кожи</p>
 <h2 id="proverka">Как проверить решение до запуска партии</h2>
 <p>Самый дешёвый способ — образец. Мы шьём опытный экземпляр за 10 рабочих дней в двух вариантах материала, вы держите оба в руках и сравниваете на своей аудитории. После этого решение по партии перестаёт быть теоретическим.</p>
 </div>
 
-<aside class="article-sidebar">
+<aside class="article-sidebar" aria-label="Дополнительно">
 <div class="article-sidebar__inner">
 <div class="article-sidebar__card">
-<div class="article-sidebar__eyebrow">Нужен расчёт</div>
-<div class="article-sidebar__title">Подберём материал под вашу модель</div>
-<div class="article-sidebar__text">Опишите изделие и тираж — вернёмся с вариантами кожи и расчётом.</div>
-<button type="button" class="btn btn-lg" style="width:100%" data-open-modal data-src="Статья · врезка в тексте">Оставить заявку</button>
+<p class="article-sidebar__eyebrow">Нужен расчёт</p>
+<p class="article-sidebar__title">Подберём материал под вашу модель</p>
+<p class="article-sidebar__text">Опишите изделие и тираж — вернёмся с вариантами кожи и расчётом.</p>
+<button type="button" class="btn btn-lg btn--full" data-open-modal data-src="Статья · врезка в тексте">Оставить заявку</button>
 </div>
-<div class="article-toc">
-<div class="article-sidebar__eyebrow" style="margin-bottom:16px">В этой статье</div>
-<div class="article-toc__list">
-<span class="is-current">Разница между типами дубления</span><a href="#vybor">Что учитывать при выборе</a><a href="#kombo">Комбинированные конструкции</a><a href="#proverka">Проверка до партии</a>
-</div>
-</div>
+<nav class="article-toc" aria-label="Содержание статьи">
+<p class="article-sidebar__eyebrow">В этой статье</p>
+<ol class="article-toc__list">
+<li class="is-current">Разница между типами дубления</li>
+<li><a href="#vybor">Что учитывать при выборе</a></li>
+<li><a href="#kombo">Комбинированные конструкции</a></li>
+<li><a href="#proverka">Проверка до партии</a></li>
+</ol>
+</nav>
 </div>
 </aside>
 </div>
 </article>
 
-<section class="article-more">
-<h2 class="h2">Ещё статьи</h2>
-<div class="article-more__grid">
-<div><div class="article-more__meta">29.07.2026 · ТИРАЖИ</div><div class="article-more__title"><a href="article.html">Почему минимальный тираж — 50 единиц</a></div><div class="article-more__desc">Что происходит на производстве при переходе от единичного образца к партии.</div></div>
-<div><div class="article-more__meta">15.07.2026 · ПРОИЗВОДСТВО</div><div class="article-more__title"><a href="article.html">Как мы делаем образец за 10 дней</a></div><div class="article-more__desc">Пошагово: от эскиза и лекал до опытного экземпляра с вашей фурнитурой.</div></div>
-<div><div class="article-more__meta">02.07.2026 · МАТЕРИАЛЫ</div><div class="article-more__title"><a href="article.html">Обрез края: покраска или загибка</a></div><div class="article-more__desc">Два подхода к отделке края и как они читаются в готовом изделии.</div></div>
-</div>
+<section class="article-more" aria-labelledby="article-more-h2">
+<h2 class="h2" id="article-more-h2">Ещё статьи</h2>
+<ul class="article-more__grid">
+<li><p class="article-more__meta">29.07.2026 · ТИРАЖИ</p><p class="article-more__title"><a href="article.html">Почему минимальный тираж — 50 единиц</a></p><p class="article-more__desc">Что происходит на производстве при переходе от единичного образца к партии.</p></li>
+<li><p class="article-more__meta">15.07.2026 · ПРОИЗВОДСТВО</p><p class="article-more__title"><a href="article.html">Как мы делаем образец за 10 дней</a></p><p class="article-more__desc">Пошагово: от эскиза и лекал до опытного экземпляра с вашей фурнитурой.</p></li>
+<li><p class="article-more__meta">02.07.2026 · МАТЕРИАЛЫ</p><p class="article-more__title"><a href="article.html">Обрез края: покраска или загибка</a></p><p class="article-more__desc">Два подхода к отделке края и как они читаются в готовом изделии.</p></li>
+</ul>
 </section>
 
 <div class="article-cta-wrap">
-<section class="cta-band">
+<section class="cta-band" aria-labelledby="article-cta-h2">
 <div>
-<h2 class="cta-band__title">Обсудим материал для вашей партии</h2>
+<h2 class="cta-band__title" id="article-cta-h2">Обсудим материал для вашей партии</h2>
 <p class="cta-band__text">Технолог предложит артикулы под конструкцию, тираж и бюджет.</p>
 </div>
 <button type="button" class="btn btn-cta" data-open-modal data-src="Статья · финальный CTA">Оставить заявку</button>
 </section>
+</div>
+</main>
 
 <footer>
 <div class="site-footer">
-<div><div class="site-footer__brand-name">ЛЕДЕРО</div><div class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</div></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Услуги</div><a href="service.html">Сумки</a><a href="service.html">Кошельки</a><a href="service.html">Ремни</a><a href="service.html">Ремешки для часов</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Компания</div><a href="production.html">О производстве</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Контакты</div><a href="contacts.html">+7 495 000-00-00</a><a href="contacts.html">zakaz@ledero.ru</a><span>Москва, ул. Примерная, 1</span></div>
+<div>
+<p class="site-footer__brand-name">ЛЕДЕРО</p>
+<p class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</p>
+</div>
+<nav class="site-footer__col" aria-label="Услуги">
+<p class="site-footer__col-title">Услуги</p>
+<ul class="site-footer__list">
+<li><a href="service.html">Сумки</a></li>
+<li><a href="service.html">Кошельки</a></li>
+<li><a href="service.html">Ремни</a></li>
+<li><a href="service.html">Ремешки для часов</a></li>
+</ul>
+</nav>
+<nav class="site-footer__col" aria-label="Компания">
+<p class="site-footer__col-title">Компания</p>
+<ul class="site-footer__list">
+<li><a href="production.html">О производстве</a></li>
+<li><a href="cases.html">Кейсы</a></li>
+<li><a href="terms.html">Условия</a></li>
+<li><a href="blog.html">Блог</a></li>
+</ul>
+</nav>
+<div class="site-footer__col">
+<p class="site-footer__col-title">Контакты</p>
+<ul class="site-footer__list">
+<li><a href="tel:+74950000000">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a></li>
+<li><a href="mailto:zakaz@ledero.ru">zakaz@ledero.ru</a></li>
+<li>Москва, ул. Примерная, 1</li>
+</ul>
+</div>
 </div>
 <div class="sticky-cta">
 <p class="sticky-cta__text">Нужен расчёт партии? Ответим в течение рабочего дня.</p>
 <button type="button" class="btn btn-sticky" data-open-modal data-src="Плавающая панель">Оставить заявку</button>
 </div>
 </footer>
-</div>
 
 <div class="modal-overlay" data-modal-overlay data-close-modal></div>
-<div class="modal" data-modal>
+<div class="modal" data-modal role="dialog" aria-modal="true" aria-labelledby="modal-title">
 <div class="modal__box">
 <div class="modal__head">
-<h3 class="modal__title">Оставить заявку</h3>
+<h2 class="modal__title" id="modal-title">Оставить заявку</h2>
 <button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
 </div>
 <p class="modal__desc">Подберём материалы и рассчитаем стоимость партии.</p>
 <form data-modal-form>
 <input type="hidden" data-modal-source name="source">
 <div class="modal__grid">
-<input placeholder="Имя" name="name">
-<input placeholder="Компания или бренд" name="company">
-<input placeholder="Телефон или email" name="contact">
-<input placeholder="Тираж, шт." name="qty">
+<label><span class="visually-hidden">Имя</span><input type="text" placeholder="Имя" name="name" autocomplete="name"></label>
+<label><span class="visually-hidden">Компания или бренд</span><input type="text" placeholder="Компания или бренд" name="company" autocomplete="organization"></label>
+<label><span class="visually-hidden">Телефон или email</span><input type="text" placeholder="Телефон или email" name="contact" autocomplete="tel"></label>
+<label><span class="visually-hidden">Тираж, шт.</span><input type="text" placeholder="Тираж, шт." name="qty" inputmode="numeric"></label>
 </div>
-<textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea>
+<label><span class="visually-hidden">Что нужно отшить</span><textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea></label>
 <button type="submit" class="btn btn-block">Отправить заявку</button>
 <p class="modal__disclaimer">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
 </form>
 </div>
 </div>
 
-<script src="main.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

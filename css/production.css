@@ -1,9 +1,16 @@
 /* ЛЕДЕРО — стили страницы «Производство» (production.html) */
 
-.prod-hero { padding: 88px var(--pad-x) 84px; }
+.prod-hero {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 64px;
+  align-items: end;
+  padding: 88px var(--pad-x) 84px;
+}
 .prod-hero .h1-sub { max-width: 16ch; }
 .prod-hero .lede { max-width: 46ch; margin-bottom: 38px; }
 .prod-hero__actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.prod-hero__photo { height: 430px; }
 
 .prod-shop { padding: 96px var(--pad-x); }
 .prod-shop .h2 { max-width: 18ch; }

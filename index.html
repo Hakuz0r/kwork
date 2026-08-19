@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ЛЕДЕРО — контрактное производство изделий из кожи</title>
 <meta name="description" content="Оптовый пошив сумок, кошельков, ремней, фартуков и ремешков для часов под вашим брендом. Тираж от 50 шт., образец за 10 дней, полный цикл в одном цехе.">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,96 +15,153 @@
 
 <header class="site-header">
 <a href="index.html" class="site-header__brand">ЛЕДЕРО</a>
-<button type="button" class="nav-toggle" data-nav-toggle aria-label="Меню"><span></span><span></span><span></span></button>
-<nav class="site-header__nav" data-nav>
+<button type="button" class="nav-toggle" data-nav-toggle aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+<nav class="site-header__nav" id="site-nav" data-nav aria-label="Основная навигация">
 <a href="service.html">Услуги</a><a href="production.html">Производство</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a><a href="contacts.html">Контакты</a>
 </nav>
 <div class="site-header__aside">
-<span class="site-header__phone">+7 495 000-00-00</span>
+<a href="tel:+74950000000" class="site-header__phone">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a>
 <button type="button" class="btn btn-sm" data-open-modal data-src="Шапка сайта">Оставить заявку</button>
 </div>
 </header>
 
-<section class="home-hero split-2col" style="--split: 1.05fr .95fr; --split-align: end;">
+<main>
+
+<section class="home-hero" aria-labelledby="home-h1">
 <div>
-<div class="eyebrow" style="margin-bottom:30px">Контрактное производство изделий из кожи</div>
-<h1 class="h1">Отшиваем кожу под вашим брендом</h1>
+<p class="eyebrow">Контрактное производство изделий из кожи</p>
+<h1 class="h1" id="home-h1">Отшиваем кожу под вашим брендом</h1>
 <p class="lede">Оптовый пошив сумок, кошельков, ремней, фартуков и ремешков для часов. Полный цикл — от разработки образца до отгрузки партии с вашей маркировкой.</p>
 <div class="home-hero__actions">
 <button type="button" class="btn btn-lg" data-open-modal data-src="Хиро-секция">Оставить заявку</button>
 <a href="service.html" class="link-underline">Смотреть услуги</a>
 </div>
 </div>
-<div class="placeholder" style="--ph-h:470px"><span class="placeholder__label">фото / цех, раскрой кожи</span></div>
+<figure class="photo-frame home-hero__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Раскрой кожи в производственном цехе ЛЕДЕРО" loading="eager" fetchpriority="high">
+<figcaption class="photo-frame__caption">Цех, раскрой кожи</figcaption>
+</figure>
 </section>
 
 <div class="stats">
-<div class="stats__item"><div class="stats__num">12 лет</div><div class="stats__label">на контрактном пошиве</div></div>
-<div class="stats__item"><div class="stats__num">40+</div><div class="stats__label">брендов в работе</div></div>
-<div class="stats__item"><div class="stats__num">от 50 шт.</div><div class="stats__label">минимальный тираж</div></div>
-<div class="stats__item"><div class="stats__num">10 дней</div><div class="stats__label">срок образца</div></div>
+<div class="stats__item"><p class="stats__num">12 лет</p><p class="stats__label">на контрактном пошиве</p></div>
+<div class="stats__item"><p class="stats__num">40+</p><p class="stats__label">брендов в работе</p></div>
+<div class="stats__item"><p class="stats__num">от 50 шт.</p><p class="stats__label">минимальный тираж</p></div>
+<div class="stats__item"><p class="stats__num">10 дней</p><p class="stats__label">срок образца</p></div>
 </div>
 
-<section class="home-production split-2col" style="--split: .9fr 1.1fr; --split-gap: 72px;">
+<section class="home-production" aria-labelledby="home-production-h2">
 <div class="home-production__col">
-<h2 class="h2">Собственное производство, а не посредничество</h2>
+<h2 class="h2" id="home-production-h2">Собственное производство, а не посредничество</h2>
 <p>Раскрой, пошив, отделка и упаковка — в одном цехе, одними и теми же мастерами. Поэтому держим сроки и отвечаем за качество на каждом этапе, а не гоняем партию между подрядчиками.</p>
 <p><a href="production.html" class="link-underline">Подробнее о производстве</a></p>
 </div>
-<div class="placeholder" style="--ph-h:300px"><span class="placeholder__label">фото / общий вид цеха</span></div>
+<figure class="photo-frame home-production__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Общий вид производственного цеха ЛЕДЕРО" loading="lazy">
+<figcaption class="photo-frame__caption">Общий вид цеха</figcaption>
+</figure>
 </section>
 
-<section class="home-services">
+<section class="home-services" aria-labelledby="home-services-h2">
 <div class="home-services__head">
-<h2 class="h2" style="margin-bottom:0">Что отшиваем</h2>
+<h2 class="h2" id="home-services-h2">Что отшиваем</h2>
 <a href="service.html" class="link-underline link-underline--14">Все направления</a>
 </div>
-<div class="grid-divider">
-<div class="grid-divider__item"><div class="grid-divider__num">01</div><div class="grid-divider__title"><a href="service.html">Сумки</a></div><div class="grid-divider__desc">Шопперы, кроссбоди, портфели, дорожные</div></div>
-<div class="grid-divider__item"><div class="grid-divider__num">02</div><div class="grid-divider__title"><a href="service.html">Кошельки и картхолдеры</a></div><div class="grid-divider__desc">Малая кожгалантерея любой конструкции</div></div>
-<div class="grid-divider__item"><div class="grid-divider__num">03</div><div class="grid-divider__title"><a href="service.html">Ремни</a></div><div class="grid-divider__desc">Поясные ремни, фурнитура на выбор</div></div>
-<div class="grid-divider__item"><div class="grid-divider__num">04</div><div class="grid-divider__title"><a href="service.html">Ремешки для часов</a></div><div class="grid-divider__desc">Под конкретную модель, ручной обрез</div></div>
-<div class="grid-divider__item"><div class="grid-divider__num">05</div><div class="grid-divider__title"><a href="service.html">Фартуки</a></div><div class="grid-divider__desc">Для баров, барберов, мастерских</div></div>
-<div class="grid-divider__item"><div class="grid-divider__num">06</div><div class="grid-divider__title"><a href="service.html">Нестандартные изделия</a></div><div class="grid-divider__desc">Чехлы, органайзеры, подарочные наборы</div></div>
-</div>
+<ul class="grid-divider">
+<li class="grid-divider__item"><p class="grid-divider__num">01</p><p class="grid-divider__title"><a href="service.html">Сумки</a></p><p class="grid-divider__desc">Шопперы, кроссбоди, портфели, дорожные</p></li>
+<li class="grid-divider__item"><p class="grid-divider__num">02</p><p class="grid-divider__title"><a href="service.html">Кошельки и картхолдеры</a></p><p class="grid-divider__desc">Малая кожгалантерея любой конструкции</p></li>
+<li class="grid-divider__item"><p class="grid-divider__num">03</p><p class="grid-divider__title"><a href="service.html">Ремни</a></p><p class="grid-divider__desc">Поясные ремни, фурнитура на выбор</p></li>
+<li class="grid-divider__item"><p class="grid-divider__num">04</p><p class="grid-divider__title"><a href="service.html">Ремешки для часов</a></p><p class="grid-divider__desc">Под конкретную модель, ручной обрез</p></li>
+<li class="grid-divider__item"><p class="grid-divider__num">05</p><p class="grid-divider__title"><a href="service.html">Фартуки</a></p><p class="grid-divider__desc">Для баров, барберов, мастерских</p></li>
+<li class="grid-divider__item"><p class="grid-divider__num">06</p><p class="grid-divider__title"><a href="service.html">Нестандартные изделия</a></p><p class="grid-divider__desc">Чехлы, органайзеры, подарочные наборы</p></li>
+</ul>
 </section>
 
-<section class="home-cases">
+<section class="home-cases" aria-labelledby="home-cases-h2">
 <div class="home-cases__head">
-<h2 class="h2" style="margin-bottom:0">Выполненные заказы</h2>
+<h2 class="h2" id="home-cases-h2">Выполненные заказы</h2>
 <a href="cases.html" class="link-underline link-underline--14">Все кейсы</a>
 </div>
-<div class="grid-cards" style="--cols:3">
-<div><div class="placeholder" style="--ph-h:280px"><span class="placeholder__label">фото / шопперы</span></div><div class="card__title">Шопперы для сети кофеен</div><div class="card__meta">300 шт. · растительное дубление · 5 недель</div></div>
-<div><div class="placeholder" style="--ph-h:280px"><span class="placeholder__label">фото / кошельки</span></div><div class="card__title">Кошельки для ювелирного бренда</div><div class="card__meta">1 200 шт. · тиснение логотипа · 7 недель</div></div>
-<div><div class="placeholder" style="--ph-h:280px"><span class="placeholder__label">фото / ремешки</span></div><div class="card__title">Ремешки для часового ателье</div><div class="card__meta">450 шт. · 6 моделей · 4 недели</div></div>
-</div>
+<ul class="grid-cards">
+<li>
+<figure class="photo-frame home-cases__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Пошитые шопперы для сети кофеен" loading="lazy">
+<figcaption class="photo-frame__caption">Шопперы</figcaption>
+</figure>
+<p class="card__title">Шопперы для сети кофеен</p>
+<p class="card__meta">300 шт. · растительное дубление · 5 недель</p>
+</li>
+<li>
+<figure class="photo-frame home-cases__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Кошельки для ювелирного бренда" loading="lazy">
+<figcaption class="photo-frame__caption">Кошельки</figcaption>
+</figure>
+<p class="card__title">Кошельки для ювелирного бренда</p>
+<p class="card__meta">1 200 шт. · тиснение логотипа · 7 недель</p>
+</li>
+<li>
+<figure class="photo-frame home-cases__photo">
+<img class="photo-frame__img" src="img/placeholder.svg" width="800" height="600" alt="Ремешки для часового ателье" loading="lazy">
+<figcaption class="photo-frame__caption">Ремешки</figcaption>
+</figure>
+<p class="card__title">Ремешки для часового ателье</p>
+<p class="card__meta">450 шт. · 6 моделей · 4 недели</p>
+</li>
+</ul>
 </section>
 
-<section class="home-terms">
-<h2 class="h2">Условия работы</h2>
-<p class="lede" style="max-width:52ch">Минимальный тираж, сроки и документы — то, с чего стоит начать, прежде чем считать бюджет партии.</p>
+<section class="home-terms" aria-labelledby="home-terms-h2">
+<h2 class="h2" id="home-terms-h2">Условия работы</h2>
+<p class="lede">Минимальный тираж, сроки и документы — то, с чего стоит начать, прежде чем считать бюджет партии.</p>
 <div class="home-terms__row">
-<div class="home-terms__fact"><div class="home-terms__fact-num">от 50 шт.</div><div class="home-terms__fact-label">Минимальный тираж на модель, для малой галантереи — от 100 единиц</div></div>
-<div class="home-terms__fact"><div class="home-terms__fact-num">3–7 недель</div><div class="home-terms__fact-label">Партия после согласования образца, в зависимости от объёма</div></div>
+<div class="home-terms__fact"><p class="home-terms__fact-num">от 50 шт.</p><p class="home-terms__fact-label">Минимальный тираж на модель, для малой галантереи — от 100 единиц</p></div>
+<div class="home-terms__fact"><p class="home-terms__fact-num">3–7 недель</p><p class="home-terms__fact-label">Партия после согласования образца, в зависимости от объёма</p></div>
 </div>
-<p style="margin-top:28px"><a href="terms.html" class="link-underline">Подробнее об условиях</a></p>
+<p class="home-terms__more"><a href="terms.html" class="link-underline">Подробнее об условиях</a></p>
 </section>
 
-<section class="cta-band">
+<section class="cta-band" aria-labelledby="home-cta-h2">
 <div>
-<h2 class="cta-band__title">Рассчитаем стоимость вашей партии</h2>
+<h2 class="cta-band__title" id="home-cta-h2">Рассчитаем стоимость вашей партии</h2>
 <p class="cta-band__text">Опишите изделие и тираж — вернёмся с расчётом и сроками в течение рабочего дня.</p>
 </div>
 <button type="button" class="btn btn-cta" data-open-modal data-src="Финальный CTA">Оставить заявку</button>
 </section>
 
+</main>
+
 <footer>
 <div class="site-footer">
-<div><div class="site-footer__brand-name">ЛЕДЕРО</div><div class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</div></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Услуги</div><a href="service.html">Сумки</a><a href="service.html">Кошельки</a><a href="service.html">Ремни</a><a href="service.html">Ремешки для часов</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Компания</div><a href="production.html">О производстве</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a></div>
-<div class="site-footer__col"><div class="site-footer__col-title">Контакты</div><a href="contacts.html">+7 495 000-00-00</a><a href="contacts.html">zakaz@ledero.ru</a><span>Москва, ул. Примерная, 1</span></div>
+<div>
+<p class="site-footer__brand-name">ЛЕДЕРО</p>
+<p class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</p>
+</div>
+<nav class="site-footer__col" aria-label="Услуги">
+<p class="site-footer__col-title">Услуги</p>
+<ul class="site-footer__list">
+<li><a href="service.html">Сумки</a></li>
+<li><a href="service.html">Кошельки</a></li>
+<li><a href="service.html">Ремни</a></li>
+<li><a href="service.html">Ремешки для часов</a></li>
+</ul>
+</nav>
+<nav class="site-footer__col" aria-label="Компания">
+<p class="site-footer__col-title">Компания</p>
+<ul class="site-footer__list">
+<li><a href="production.html">О производстве</a></li>
+<li><a href="cases.html">Кейсы</a></li>
+<li><a href="terms.html">Условия</a></li>
+<li><a href="blog.html">Блог</a></li>
+</ul>
+</nav>
+<div class="site-footer__col">
+<p class="site-footer__col-title">Контакты</p>
+<ul class="site-footer__list">
+<li><a href="tel:+74950000000">+7&nbsp;495&nbsp;000&#8209;00&#8209;00</a></li>
+<li><a href="mailto:zakaz@ledero.ru">zakaz@ledero.ru</a></li>
+<li>Москва, ул. Примерная, 1</li>
+</ul>
+</div>
 </div>
 <div class="sticky-cta">
 <p class="sticky-cta__text">Нужен расчёт партии? Ответим в течение рабочего дня.</p>
@@ -112,28 +170,28 @@
 </footer>
 
 <div class="modal-overlay" data-modal-overlay data-close-modal></div>
-<div class="modal" data-modal>
+<div class="modal" data-modal role="dialog" aria-modal="true" aria-labelledby="modal-title">
 <div class="modal__box">
 <div class="modal__head">
-<h3 class="modal__title">Оставить заявку</h3>
+<h2 class="modal__title" id="modal-title">Оставить заявку</h2>
 <button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
 </div>
 <p class="modal__desc">Подберём материалы и рассчитаем стоимость партии.</p>
 <form data-modal-form>
 <input type="hidden" data-modal-source name="source">
 <div class="modal__grid">
-<input placeholder="Имя" name="name">
-<input placeholder="Компания или бренд" name="company">
-<input placeholder="Телефон или email" name="contact">
-<input placeholder="Тираж, шт." name="qty">
+<label><span class="visually-hidden">Имя</span><input type="text" placeholder="Имя" name="name" autocomplete="name"></label>
+<label><span class="visually-hidden">Компания или бренд</span><input type="text" placeholder="Компания или бренд" name="company" autocomplete="organization"></label>
+<label><span class="visually-hidden">Телефон или email</span><input type="text" placeholder="Телефон или email" name="contact" autocomplete="tel"></label>
+<label><span class="visually-hidden">Тираж, шт.</span><input type="text" placeholder="Тираж, шт." name="qty" inputmode="numeric"></label>
 </div>
-<textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea>
+<label><span class="visually-hidden">Что нужно отшить</span><textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea></label>
 <button type="submit" class="btn btn-block">Отправить заявку</button>
 <p class="modal__disclaimer">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
 </form>
 </div>
 </div>
 
-<script src="main.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
