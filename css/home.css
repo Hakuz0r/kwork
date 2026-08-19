@@ -1,0 +1,23 @@
+/* ЛЕДЕРО — стили главной страницы (index.html) */
+
+.home-hero { padding: 118px var(--pad-x) 96px; }
+.home-hero .h1 { max-width: 11ch; }
+.home-hero .lede { max-width: 46ch; margin-bottom: 40px; }
+.home-hero__actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.home-production { padding: 110px var(--pad-x); }
+.home-production .h2 { max-width: 16ch; }
+.home-production__col p { margin: 0 0 18px; font: 300 16px/1.65 var(--font-sans); color: var(--ink-soft); max-width: 44ch; text-wrap: pretty; }
+.home-production__col p:last-child { margin-bottom: 0; }
+
+.home-services { padding: 0 var(--pad-x) 110px; }
+.home-services__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 44px; gap: 24px; flex-wrap: wrap; }
+
+.home-cases { padding: 110px var(--pad-x); }
+.home-cases__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 44px; gap: 24px; flex-wrap: wrap; }
+
+.home-terms { padding: 0 var(--pad-x) 110px; }
+.home-terms__row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
+.home-terms__fact { border-top: 1px solid var(--ink); padding-top: 18px; }
+.home-terms__fact-num { font: 300 28px var(--font-sans); letter-spacing: -.02em; margin-bottom: 6px; }
+.home-terms__fact-label { font: 400 14px/1.5 var(--font-sans); color: var(--muted); }

@@ -1,0 +1,10 @@
+/* ЛЕДЕРО — стили страницы «Условия» (terms.html) */
+
+.terms-hero { padding: 80px var(--pad-x) 64px; }
+.terms-hero .h1-sub { max-width: 16ch; }
+.terms-hero .lede { max-width: 48ch; margin-bottom: 38px; }
+.terms-hero__actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.terms-list { padding: 0 var(--pad-x) 96px; }
+.terms-list .kv-row { --kv-w: 260px; --kv-gap: 40px; padding: 30px 0; }
+.terms-list .kv-desc { max-width: 60ch; }

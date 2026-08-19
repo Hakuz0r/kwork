@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кейсы — ЛЕДЕРО</title>
+<meta name="description" content="Портфолио отшитых партий: сумки, кошельки, ремни и ремешки для часов под брендами наших клиентов. Тираж, материалы и сроки по каждому кейсу.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+<a href="index.html" class="site-header__brand">ЛЕДЕРО</a>
+<button type="button" class="nav-toggle" data-nav-toggle aria-label="Меню"><span></span><span></span><span></span></button>
+<nav class="site-header__nav" data-nav>
+<a href="service.html">Услуги</a><a href="production.html">Производство</a><a href="cases.html" class="is-active">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a><a href="contacts.html">Контакты</a>
+</nav>
+<div class="site-header__aside">
+<span class="site-header__phone">+7 495 000-00-00</span>
+<button type="button" class="btn btn-sm" data-open-modal data-src="Шапка сайта">Оставить заявку</button>
+</div>
+</header>
+
+<nav class="breadcrumb" aria-label="Хлебные крошки">
+<a href="index.html">Главная</a><span>/</span><span class="current">Кейсы</span>
+</nav>
+
+<section class="cases-hero">
+<div class="eyebrow">Портфолио · пошитые партии</div>
+<h1 class="h1-sub">Что мы уже отшили для брендов</h1>
+<p class="lede">Ниже — часть партий за последний год: тираж, материал и сроки по каждой. Полное портфолио с образцами показываем на созвоне.</p>
+</section>
+
+<section class="cases-grid">
+<div class="grid-cards" style="--cols:3">
+<div><div class="placeholder" style="--ph-h:260px"><span class="placeholder__label">фото / шопперы</span></div><div class="card__title">Шопперы для сети кофеен</div><div class="card__meta">300 шт. · растительное дубление · 5 недель</div></div>
+<div><div class="placeholder" style="--ph-h:260px"><span class="placeholder__label">фото / кошельки</span></div><div class="card__title">Кошельки для ювелирного бренда</div><div class="card__meta">1 200 шт. · тиснение логотипа · 7 недель</div></div>
+<div><div class="placeholder" style="--ph-h:260px"><span class="placeholder__label">фото / ремешки</span></div><div class="card__title">Ремешки для часового ателье</div><div class="card__meta">450 шт. · 6 моделей · 4 недели</div></div>
+<div><div class="placeholder" style="--ph-h:260px"><span class="placeholder__label">фото / портфели</span></div><div class="card__title">Портфели для юридической фирмы</div><div class="card__meta">120 шт. · тиснение логотипа · 6 недель</div></div>
+<div><div class="placeholder" style="--ph-h:260px"><span class="placeholder__label">фото / кроссбоди</span></div><div class="card__title">Кроссбоди для локального бренда</div><div class="card__meta">250 шт. · 3 цвета · 5 недель</div></div>
+<div><div class="placeholder" style="--ph-h:260px"><span class="placeholder__label">фото / ремни</span></div><div class="card__title">Ремни для сети магазинов одежды</div><div class="card__meta">600 шт. · хромовое дубление · 6 недель</div></div>
+</div>
+</section>
+
+<section class="cta-band">
+<div>
+<h2 class="cta-band__title">Хотите так же — под своим брендом?</h2>
+<p class="cta-band__text">Опишите изделие и тираж — вернёмся с расчётом и сроками в течение рабочего дня.</p>
+</div>
+<button type="button" class="btn btn-cta" data-open-modal data-src="Кейсы · финальный CTA">Оставить заявку</button>
+</section>
+
+<footer>
+<div class="site-footer">
+<div><div class="site-footer__brand-name">ЛЕДЕРО</div><div class="site-footer__brand-desc">Контрактное производство<br>изделий из кожи</div></div>
+<div class="site-footer__col"><div class="site-footer__col-title">Услуги</div><a href="service.html">Сумки</a><a href="service.html">Кошельки</a><a href="service.html">Ремни</a><a href="service.html">Ремешки для часов</a></div>
+<div class="site-footer__col"><div class="site-footer__col-title">Компания</div><a href="production.html">О производстве</a><a href="cases.html">Кейсы</a><a href="terms.html">Условия</a><a href="blog.html">Блог</a></div>
+<div class="site-footer__col"><div class="site-footer__col-title">Контакты</div><a href="contacts.html">+7 495 000-00-00</a><a href="contacts.html">zakaz@ledero.ru</a><span>Москва, ул. Примерная, 1</span></div>
+</div>
+<div class="sticky-cta">
+<p class="sticky-cta__text">Нужен расчёт партии? Ответим в течение рабочего дня.</p>
+<button type="button" class="btn btn-sticky" data-open-modal data-src="Плавающая панель">Оставить заявку</button>
+</div>
+</footer>
+
+<div class="modal-overlay" data-modal-overlay data-close-modal></div>
+<div class="modal" data-modal>
+<div class="modal__box">
+<div class="modal__head">
+<h3 class="modal__title">Оставить заявку</h3>
+<button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
+</div>
+<p class="modal__desc">Подберём материалы и рассчитаем стоимость партии.</p>
+<form data-modal-form>
+<input type="hidden" data-modal-source name="source">
+<div class="modal__grid">
+<input placeholder="Имя" name="name">
+<input placeholder="Компания или бренд" name="company">
+<input placeholder="Телефон или email" name="contact">
+<input placeholder="Тираж, шт." name="qty">
+</div>
+<textarea placeholder="Что нужно отшить" rows="3" name="message"></textarea>
+<button type="submit" class="btn btn-block">Отправить заявку</button>
+<p class="modal__disclaimer">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+</form>
+</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

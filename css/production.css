@@ -1,0 +1,22 @@
+/* ЛЕДЕРО — стили страницы «Производство» (production.html) */
+
+.prod-hero { padding: 88px var(--pad-x) 84px; }
+.prod-hero .h1-sub { max-width: 16ch; }
+.prod-hero .lede { max-width: 46ch; margin-bottom: 38px; }
+.prod-hero__actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.prod-shop { padding: 96px var(--pad-x); }
+.prod-shop .h2 { max-width: 18ch; }
+.prod-shop__col p { margin: 0 0 18px; font: 300 16px/1.65 var(--font-sans); color: var(--ink-soft); max-width: 44ch; text-wrap: pretty; }
+.prod-shop__col p:last-child { margin-bottom: 0; }
+
+.prod-craft { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 24px; }
+.prod-craft__item { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); }
+.prod-craft__item:nth-child(2n) { padding-left: 24px; padding-right: 0; border-left: 1px solid var(--line); }
+.prod-craft__item:nth-child(n+3) { border-bottom: 0; }
+.prod-craft__title { font: 500 15px var(--font-sans); }
+.prod-craft__desc { font: 400 13px/1.5 var(--font-sans); color: var(--muted); margin-top: 6px; }
+
+.prod-process { padding: 96px var(--pad-x); background: var(--bg-alt); }
+.prod-process .h2 { margin-bottom: 56px; }
+.prod-process__cta { margin-top: 48px; }

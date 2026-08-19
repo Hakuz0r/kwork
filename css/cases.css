@@ -1,0 +1,8 @@
+/* ЛЕДЕРО — стили страницы «Кейсы» (cases.html) */
+
+.cases-hero { padding: 80px var(--pad-x) 56px; border-bottom: 1px solid var(--line); }
+.cases-hero .h1-sub { max-width: 18ch; }
+.cases-hero .lede { max-width: 54ch; }
+
+.cases-grid { padding: 72px var(--pad-x) 96px; }
+.cases-grid .card__title { font-size: 17px; }
