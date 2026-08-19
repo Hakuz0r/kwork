@@ -1,5 +1,6 @@
 /* ЛЕДЕРО — единая точка входа. Каждая HTML-страница подключает только этот файл. */
 
+@import url("fonts.css");
 @import url("base.css");
 @import url("home.css");
 @import url("production.css");
